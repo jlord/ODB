@@ -1,13 +1,18 @@
 {
-  "name": "dirtydirty",
+  "name": "odb",
   "version": "0.0.0",
-  "description": "",
+  "description": "Open the dirty files in a branch in a text editor, carry on hackin.",
   "main": "index.js",
   "bin": {
     "od": "./index.js" },
   "scripts": {
     "test": "echo psssshhaaaw"
   },
-  "author": "",
-  "license": "ISC"
+  "repository":
+  { "type" : "git"
+  , "url" : "http://github.com/jlord/ODB.git"
+  },
+  "bugs": { "url": "http://github.com/jlord/ODB/issues"},
+  "author": "Jessica Lord",
+  "license": "BSD"
 }

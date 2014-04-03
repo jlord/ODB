@@ -9,7 +9,7 @@ exec('git diff --name-only origin/gh-pages...', function(err, stdout, stdrr) {
   files.forEach(function(file) {
     if (!file) return
     if (counter === 0) {
-      command += 'Atom . ' + file
+      command += 'subl . ' + file
     } else {
       command += ' ' + file
     }
