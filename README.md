@@ -1,4 +1,3 @@
-dirtydirty
-==========
+### ~~open-dirty~~ ~~dirtydirty~~ odb
 
-Opening dirty files from a branch -- also I'm from Georgia.
+Opening dirty files from a branch.
