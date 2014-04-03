@@ -1,0 +1,13 @@
+{
+  "name": "dirtydirty",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "od": "./index.js" },
+  "scripts": {
+    "test": "echo psssshhaaaw"
+  },
+  "author": "",
+  "license": "ISC"
+}
