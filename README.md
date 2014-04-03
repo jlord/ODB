@@ -33,10 +33,22 @@ $ od
 
 The dirty files will open in your text editor :)
 
+It uses the default branch to compare to as `master`. To change the branch:
+
+```bash
+$ od gh
+# short for gh-pages
+$ od <fullbranchname>
+# for other branches
+```
+It uses `subl` as the default editor (so you'll need your command line set up for that) but you can change it to Atom:
+
+```bash
+$ od master a
+```
+
+Currently you have to include the branch, even if it's `master`, and you have to type 'a' each time. See next section.
+
 ## Future
 
-- Need to add config for setting your editor preference
-- Command line option for a shortcut setting the branch you're comparing to (master, gh-pages : m, gh)
-
-
-
+- Need to add config for setting your editor preference once.
