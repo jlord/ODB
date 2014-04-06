@@ -69,6 +69,5 @@ function buildCommands(editor) {
 function writeSetting(editor, dir) {
   fs.writeFile(dir, {'editor': editor}, function (err) {
   if (err) throw err;
-  console.log('It\'s saved!');
 })
 }
