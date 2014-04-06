@@ -26,7 +26,15 @@ $ npm install -g odb
 
 **Use**
 
-After you `cd` into the directory for the repo you're working on, run ODB:
+The default editor is Sublime. You can change it Atom:
+
+```
+$ od --editor atom
+```
+
+Do the same to set it back to Sublime, but type 'subl' (instead of the full name). I can't say how it will work with other editors...
+
+To use, after you `cd` into the directory for the repo you're working on, run ODB:
 
 ```bash
 $ cd <RepoDirectory>
@@ -43,14 +51,3 @@ $ od gh
 $ od <fullbranchname>
 # for other branches
 ```
-It uses `subl` as the default editor (so you'll need your command line set up for that) but you can change it to Atom:
-
-```bash
-$ od master a
-```
-
-Currently you have to include the branch, even if it's `master`, and you have to type 'a' each time. See next section.
-
-## Future
-
-- Need to add config for setting your editor preference once.
