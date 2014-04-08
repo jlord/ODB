@@ -18,10 +18,13 @@ if (args && args[0] == '--editor') {
     return console.log("Type 'atom' or 'subl' to set editor")
   }
 }
-
 // is it a branch being set
-if (args.length > 0 && args[0] === 'gh') branch = "gh-pages"
-if (args.length > 0 && !args[0].match('--editor')) branch = args[0]
+if (args.length > 0 && args[0] === 'gh') {
+  branch = "gh-pages"
+}
+if (args.length > 0 && args[0] != 'gh') {
+  branch = args[0]
+}
 
 // see if user had set editor
 fs.open(dir, 'r+', function(err, fd) {
@@ -35,13 +38,12 @@ fs.open(dir, 'r+', function(err, fd) {
 function getEditor(dir){
   fs.readFile(dir, function (err, data) {
     if (err) return console.log(err)
-    editor = JSON.parse(data.toString())
+    editor = JSON.parse(data).editor
     buildCommands(editor)
   })
 }
 
 var diff = "git diff --name-only origin/" + branch + "..."
-
 function buildCommands(editor) {
   exec(diff, function(err, stdout, stdrr) {
   var files = stdout.split('\n')
@@ -66,7 +68,8 @@ function buildCommands(editor) {
 }
 
 function writeSetting(editor, dir) {
-  fs.writeFile(dir, {'editor': editor}, function (err) {
+  var obj = {'editor': editor}
+  fs.writeFile(dir, JSON.stringify(obj), function (err) {
   if (err) throw err;
 })
 }
