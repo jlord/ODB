@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var exec = require('child_process').exec
-var mkdirp = require('mkdirp')
 var path = require('path')
 var fs = require('fs')
 
@@ -21,8 +20,8 @@ if (args && args[0] == '--editor') {
 }
 
 // is it a branch being set
-if (args && args[0] === 'gh') branch = "gh-pages"
-else branch = args[0] // if nothing, branch = master
+if (args.length > 0 && args[0] === 'gh') branch = "gh-pages"
+if (args.length > 0 && !args[0].match('--editor')) branch = args[0]
 
 // see if user had set editor
 fs.open(dir, 'r+', function(err, fd) {
