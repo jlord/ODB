@@ -34,7 +34,7 @@ $ od --editor atom
 
 Do the same to set it back to Sublime, but type 'subl' (instead of the full name). I can't say how it will work with other editors...
 
-To use, after you `cd` into the directory for the repo you're working on, run ODB:
+To use, after you `cd` into the directory for the repo you're working on (and if needed, `checkout` the branch you want), run ODB:
 
 ```bash
 $ cd <RepoDirectory>
